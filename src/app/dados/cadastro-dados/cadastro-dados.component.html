@@ -1,13 +1,56 @@
 <div class="container">
 
-  <h1 class="mt-4">Extrair dados</h1>
+  <h1 class="mt-4">Extração de dados</h1>
 
-  <div class="ui-g">
+  <div class="p-grid">
 
+    <div class="p-fluid">
+      <div class="p-field">
+        <label for="arquivoJson">Arquivo/Json: </label>
+        <input id="arquivoJson" type="file" pInputText accept=".json">
+      </div>
+    </div>
 
-    <button mat-raised-button (click)="openBottomSheet()">Open file</button>
+    <!-- {{ dadoDoadores | json }} -->
+
+    <p-table [value]="dadosDoadores" [paginator]="true" [rows]="9" [loading]="loading" layout="grid">
+
+      <ng-template pTemplate="header">
+        <tr>
+          <th>Nome</th>
+          <th>CPF</th>
+          <th>RG</th>
+          <th>Data/Nasc</th>
+          <th>Sexo</th>
+          <th>Altura</th>
+          <th style="width: 125px;text-align: center;">Peso</th>
+          <th>Tipo/Sanguíneo</th>
+        </tr>
+      </ng-template>
+
+      <ng-template pTemplate="body" let-dados>
+        <tr>
+          <td>{{ dados.nome }}</td>
+          <td>{{ dados.cpf }}</td>
+          <td>{{ dados.rg }}</td>
+          <td>{{ dados.data_nasc }}</td>
+          <td>{{ dados.sexo }}</td>
+          <td>{{ dados.altura }}</td>
+          <td style="width: 125px;text-align: center;">{{ dados.peso }}</td>
+          <td style="width: 125px;text-align: center;">{{ dados.tipo_sanguineo }}</td>
+        </tr>
+      </ng-template>
+
+      <ng-template pTemplate="emptymessage">
+        <tr>
+          <td colspan="8">Nenhum registro encontrado...</td>
+        </tr>
+      </ng-template>
+
+    </p-table>
 
   </div>
 
-  <button pButton type="button" label="Click"></button>
+  <button pButton type="button" label="Processar dados"></button>
+
 </div>

@@ -3,29 +3,37 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CadastroDadosComponent } from './cadastro-dados/cadastro-dados.component';
 
+import { NgxSpinnerModule } from 'ngx-spinner';
 
+// Componentes do PrimeNG
 import { ButtonModule } from 'primeng/button';
-import { ConfirmDialogModule } from 'primeng/confirmdialog';
 import { InputTextModule } from 'primeng/inputtext';
-import { FileUploadModule } from 'primeng/fileupload';
-import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
+import { DataViewModule } from 'primeng/dataview';
+
+import { TableModule } from 'primeng/table';
+
+
+import { DadosService } from './dados.service';
 
 
 @NgModule({
   declarations: [CadastroDadosComponent],
   imports: [
-    BrowserModule,
     CommonModule,
+    BrowserModule,
+    BrowserAnimationsModule,
 
+    TableModule,
+    DataViewModule,
     ButtonModule,
-    ConfirmDialogModule,
     InputTextModule,
-    FileUploadModule,
-
-    MatBottomSheetModule
-
+    HttpClientModule,
+    NgxSpinnerModule
 
   ],
-  exports: [CadastroDadosComponent]
+  exports: [CadastroDadosComponent],
+  providers: [DadosService]
 })
 export class DadosModule { }
