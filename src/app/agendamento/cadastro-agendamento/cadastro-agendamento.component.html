@@ -1,0 +1,50 @@
+<div class="container">
+
+
+  <h1 class="mt-3">Agendamento</h1>
+
+
+  <!-- <div class="p-grid"> -->
+  <!-- <div class="card"> -->
+  <!-- FLUID - FORMGRID - GRID -->
+
+  <p-card header="Agendamento de cultos">
+
+    <div class="p-fluid p-formgrid p-grid">
+
+      <div class="p-field p-col-12 p-md-6">
+        <label for="nome">Nome</label>
+        <input id="nome" type="text" pInputText>
+      </div>
+
+      <div class="p-field p-col-12 p-md-6">
+        <label for="local">Local do Culto</label>
+        <input id="local" type="text" pInputText>
+      </div>
+
+      <div class="p-field p-col-12 p-md-6">
+        <label for="data">Data do Culto</label>
+        <p-calendar id="data" [showIcon]="true" inputId="calendar"></p-calendar>
+      </div>
+
+      <div class="p-field p-col-12 p-md-6">
+        <label for="hora_inicio">Horário do início</label>
+        <p-calendar id="hora_inicio" [showIcon]="true" [timeOnly]="true" inputId="hora_inicio"></p-calendar>
+      </div>
+
+      <div class="p-field p-col-12 p-md-6">
+        <label for="hora_termino">Horário do teŕmino</label>
+        <p-calendar id="hora_termino" [showIcon]="true" [timeOnly]="true" inputId="hora_termino"></p-calendar>
+      </div>
+
+    </div>
+
+    <!-- BUTTON DE SALVAR UM AGENDAMENTO -->
+    <p-button label="Salvar" icon="pi pi-save" iconPos="left"></p-button>
+
+  </p-card>
+
+  <!-- </div>  FECHAMENTO DA TAG - 'CARD' -->
+  <!-- </div> -->
+
+</div>

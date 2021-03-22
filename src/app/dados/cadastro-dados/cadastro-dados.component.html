@@ -1,18 +1,10 @@
 <div class="container">
 
-  <h1 class="mt-4">Extração de dados</h1>
+  <h1 class="mt-4">Listagem de Doadores</h1>
 
   <div class="p-grid">
 
-    <div class="p-fluid">
-      <div class="p-field">
-        <label for="arquivoJson">Arquivo/Json: </label>
-        <input id="arquivoJson" type="file" pInputText accept=".json">
-      </div>
-    </div>
-
-    <!-- {{ dadoDoadores | json }} -->
-
+    <!-- CRIANDO A TABLE -->
     <p-table [value]="dadosDoadores" [paginator]="true" [rows]="9" [loading]="loading" layout="grid">
 
       <ng-template pTemplate="header">
@@ -51,6 +43,5 @@
 
   </div>
 
-  <button pButton type="button" label="Processar dados"></button>
 
 </div>

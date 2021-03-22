@@ -1,4 +1,4 @@
-import { DadosDoadores } from "./dados-doadores";
+import { DadosDoadores } from './dados-doadores';
 
 export class FiltroDoadores {
 

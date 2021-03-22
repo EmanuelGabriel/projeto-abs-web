@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 
-
 import { DadosDoadores } from './../dados-doadores';
 import { DadosService } from '../dados.service';
 import { NgxSpinnerService } from 'ngx-spinner';
@@ -18,16 +17,12 @@ export class CadastroDadosComponent implements OnInit {
 
   constructor(
     private dadosService: DadosService,
-    private spinner: NgxSpinnerService,) { }
+    private spinner: NgxSpinnerService) { }
 
   ngOnInit(): void {
-    this.getDadosDoadores();
-    //this.getFindAll();
   }
 
-  /**
-  * Método para exibir o Spinner
-  */
+
   exibirSpinner() {
     this.spinner.show();
     setTimeout(() => {
@@ -51,7 +46,6 @@ export class CadastroDadosComponent implements OnInit {
       console.log(resp);
     });
   }
-
 
 
 
