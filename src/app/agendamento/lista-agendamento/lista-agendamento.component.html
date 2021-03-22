@@ -2,10 +2,47 @@
 
   <h1 class="mt-4">Lista de Agendamentos</h1>
 
-  <div class="p-grid">
 
+  <p-card header="Lista de cultos agendados">
 
+    <!-- CRIANDO A TABLE -->
+    <p-table [value]="agendamentos" [paginator]="true" [loading]="loading" layout="grid" styleClass="p-datatable-sm">
 
-  </div>
+      <ng-template pTemplate="header">
+        <tr>
+          <th>#</th>
+          <th>Nome</th>
+          <th>Local</th>
+          <th>Data</th>
+          <th>Horário/Início</th>
+          <th>Horário/Término</th>
+        </tr>
+      </ng-template>
+
+      <ng-template pTemplate="body" let-agendamento>
+        <tr>
+          <td>{{ agendamento.codigo }}</td>
+          <td>{{ agendamento.nome }}</td>
+          <td>{{ agendamento.local }}</td>
+          <td>{{ agendamento.data }}</td>
+          <td>{{ agendamento.data_inicio }}</td>
+          <td>{{ agendamento.data_termino }}</td>
+        </tr>
+      </ng-template>
+
+      <ng-template pTemplate="emptymessage">
+        <tr>
+          <td colspan="8">Nenhum registro encontrado...</td>
+        </tr>
+      </ng-template>
+
+    </p-table>
+
+    <!-- BUTTON DE SALVAR UM AGENDAMENTO -->
+    <button pButton type="button" label="Agendar" class="p-button-success" routerLink="/agendamentos/novo"
+      icon="pi pi-users" iconPos="left"></button>
+
+  </p-card>
+
 
 </div>

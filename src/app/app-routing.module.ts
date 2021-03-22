@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { CadastroAgendamentoComponent } from './agendamento/cadastro-agendamento/cadastro-agendamento.component';
+import { ListaAgendamentoComponent } from './agendamento/lista-agendamento/lista-agendamento.component';
 import { CadastroDadosComponent } from './dados/cadastro-dados/cadastro-dados.component';
 import { ListagemDoadoresComponent } from './doadores/listagem-doadores/listagem-doadores.component';
 import { HomeComponent } from './home/home.component';
@@ -9,14 +9,11 @@ import { HomeComponent } from './home/home.component';
 const routes: Routes = [
 
   {
-    path: 'agendamento',
-    component: CadastroAgendamentoComponent
+    path: '',
+    redirectTo: 'agendamentos',
+    pathMatch: 'full'
   },
 
-  {
-    path: 'doadores',
-    component: ListagemDoadoresComponent
-  },
   {
     path: 'dados',
     component: CadastroDadosComponent

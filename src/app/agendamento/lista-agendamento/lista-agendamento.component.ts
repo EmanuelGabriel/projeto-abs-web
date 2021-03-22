@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListaAgendamentoComponent implements OnInit {
 
+  agendamentos: [] = [];
+  loading: boolean;
+
   constructor() { }
 
   ngOnInit(): void {
