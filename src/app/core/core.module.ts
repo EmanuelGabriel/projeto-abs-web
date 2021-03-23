@@ -2,7 +2,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DadosModule } from '../dados/dados.module';
-import { DoadoresModule } from '../doadores/doadores.module';
 import { AgendamentoModule } from '../agendamento/agendamento.module';
 
 
@@ -12,7 +11,6 @@ import { AgendamentoModule } from '../agendamento/agendamento.module';
     CommonModule,
 
     DadosModule,
-    DoadoresModule,
     AgendamentoModule
   ]
 })
